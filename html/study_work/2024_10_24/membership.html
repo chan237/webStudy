@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMBERSHIP</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border: 1px solid rgb(14, 167, 255);
+            margin: 20px;
+        }
+        tr, td{
+            padding: 2px;
+            border: 1px solid rgb(14, 167, 255);
+        }
+        th{
+            background-color: rgb(14, 167, 255);
+        }
+        i{
+            opacity: 0.3;
+        }
+        td.center{
+            font-weight: 900;
+            text-align: center;
+        }
+        div{
+            display: flex;
+        }
+        p{
+            padding: 2px;
+        }
+        div.end_butten{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            font-size: small;
+        }
+        button{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th colspan="2">회원 기본 정보</th>
+            </tr>
+            <tr>
+                <td class="center">아이디:</td>
+                <td>
+                    <label for="id"></label>
+                    <input type="text" name="id" id="id">
+                    <i> 4~12자의 영문 대소문자와 숫자로만 입력</i>
+                </td>
+            </tr>
+            <tr>
+                <td class="center">비밀번호:</td>
+                <td>
+                    <label for="password"></label>
+                    <input type="text" name="password" id="password">
+                    <i> 4~12자의 영문 대소문자와 숫자로만 입력</i>
+                </td>
+            </tr>
+            <tr>
+                <td class="center">비밀번호확인:</td>
+                <td>
+                    <label for="password"></label>
+                    <input type="text" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td class="center">메일주소:</td>
+                <td>
+                    <label for="email"></label>
+                    <input type="text" name="email" id="email">
+                    <i> ex) sammy@gamil.com</i>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">개인 신상 정보</th>
+            </tr>
+            <tr>
+                <td class="center">주민등록번호:</td>
+                <td>
+                    <div>
+                        <label for="주민등록번호"></label>
+                        <input type="text" name="주민등록번호" id="주민등록번호">
+                        <p>-</p>
+                        <label for="주민등록번호"></label>
+                        <input type="text" name="주민등록번호" id="주민등록번호">
+                        <i> ex) 123456-1234567</i>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="center">생일:</td>
+                <td>
+                    <div>
+                        <label for="생일"></label>
+                        <input type="number" max="4" name="생일" id="생일">
+                        <p>년</p>
+                        <label for="month"></label>
+                        <select name="month" id="month">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <p>월</p>
+                        <label for="day"></label>
+                        <select name="day" id="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="12">13</option>
+                            <option value="12">14</option>
+                            <option value="12">15</option>
+                            <option value="12">16</option>
+                            <option value="12">17</option>
+                            <option value="12">18</option>
+                            <option value="12">19</option>
+                            <option value="12">20</option>
+                            <option value="12">21</option>
+                            <option value="12">22</option>
+                            <option value="12">23</option>
+                            <option value="12">24</option>
+                            <option value="12">25</option>
+                            <option value="12">26</option>
+                            <option value="12">27</option>
+                            <option value="12">28</option>
+                            <option value="12">29</option>
+                            <option value="12">30</option>
+                            <option value="12">31</option>
+                        </select>
+                        <p>일</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="center">관심분야:</td>
+                <td>
+                    <div>
+                        <p><input type="checkbox"> Java</p>
+                        <p><input type="checkbox"> Android</p>
+                        <p><input type="checkbox"> PHP</p>
+                        <p><input type="checkbox"> JAVA Script</p>
+                        <p><input type="checkbox"> Python</p>
+                        <i> *하나 이상 체크</i>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="center">자기소개</td>
+                <td>
+                    <label for="introduce"></label>
+                    <textarea name="introduce" id="introduce" cols="110" rows="10" ></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="center">약관동의</td>
+                <td>
+                    <p><input type="checkbox">만 14세 이상입니다.</p>
+                    <p><input type="checkbox">이용약관 동의 <a href="#">내용보기</a></p>
+                    <p><input type="checkbox">개인정보 수집 및 이용 동의<a href="#">내용보기</a></p>
+                </td>
+            </tr>
+        </table>
+        <div class="end_butten">
+            <button type="submit">회원가입</button>
+            <button type="reset">다시입력</button>
+        </div>
+    </form>
+</body>
+</html>
