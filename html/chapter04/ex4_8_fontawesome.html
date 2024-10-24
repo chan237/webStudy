@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/de7b35df6f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Dokdo&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        nav{
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(141, 232, 161);
+        }
+        .nav_logo{
+            font-size: 24px;
+            font-weight: 900;
+        }
+        .nav_logo a:hover{
+            color: red;
+        }
+        .nav_logo a i:hover{
+            color: red;
+        }
+        .nav_logo i{
+            color: rgba(223,128,16,1);
+            margin-right: 10px;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+        ul.nav_menu a{
+            font-family: "Danfo", serif, sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+            "ELSH" 0;
+            padding: 8px 15px;
+        }
+        ul.nav_menu a:hover{
+            background-color: black;
+            color: white;
+        }
+        ul.nav_icons a{
+            font-size: 20px;
+            padding: 8px 15px;
+            border-radius: 50%;
+        }
+        ul.nav_icons a:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <a href="#"><i class="fa-solid fa-person-snowboarding"></i></a>
+            <a href="#">WEB CODING</a>
+        </div>
+
+        <ul class="nav_menu">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+        </ul>
+
+        <ul class="nav_icons">
+            <li><a href="#"><i class="fa-solid fa-fire"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-face-grin-tongue-wink"></i></a></li>
+        </ul>
+    </nav>
+</body>
+</html>
