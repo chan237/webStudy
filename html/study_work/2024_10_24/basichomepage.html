@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/de7b35df6f.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .nav_logo{
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            font-size: xx-large;
+        }
+        .nav_logo a:hover{
+            color: red;
+        }
+        ul{
+            width: 1000px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+        }
+        li{
+            width: 200px;
+            background-color: rgb(116, 116, 116);
+            padding: 10px 20px; 
+            text-align: center;
+        }
+        li a{
+            color: white;
+            font-weight: 900;
+        }
+        li:hover{
+            background-color: rgb(0, 0, 0);
+        }
+        .nav_info{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <a href="#"><i class="fa-brands fa-shopify"></i></a>
+            <a href="#">SHOPING COPER</a>
+        </div>
+        <ul>
+            <li><a href="#">의류</a></li>
+            <li><a href="#">식품</a></li>
+            <li><a href="#">가전제품</a></li>
+            <li><a href="#">전자제품</a></li>
+            <li><a href="#">장난감</a></li>
+        </ul>
+        <div class="nav_info">
+            <p><i class="fa-solid fa-phone"> 02-000-0000</i></p>
+            <p><i class="fa-solid fa-envelope"> shoping@gmail</i></p>
+        </div>
+    </nav>
+</body>
+</html>
