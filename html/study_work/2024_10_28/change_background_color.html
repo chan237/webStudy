@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            list-style-type: none;
+        }
+        li{
+            border: 1px solid black;
+            margin: 5px;
+            padding: 10px 50px;
+        }
+        li a{
+            color: black;
+            text-decoration: none;
+        }
+        li:hover{
+         background-color: rgb(213, 213, 213);   
+        }
+        div {
+            width: 960px;
+            height: 960px;
+            border: 1px solid black;
+            margin-left: 45px;
+            border-radius: 3%;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBC('green')">green</a></li>
+        <li><a href="#" onclick="changeBC('orange')">orange</a></li>
+        <li><a href="#" onclick="changeBC('purple')">purple</a></li>
+    </ul>
+    <div id="bc">
+    </div>
+    <script>
+        function changeBC(color){
+            let bcs = document.getElementById('bc');
+            bcs.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
