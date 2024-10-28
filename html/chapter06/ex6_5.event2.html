@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count =0;
+        function colorChange(colorName){
+            count++;
+           let h1Array = window.document.getElementsByTagName("h1");
+           h1Array[0].style.color = colorName;
+           h1Array[0].textContent = colorName;
+           let size = (count%2===0)?("72px"):("24px");
+           h1Array[0].style.fontSize = size;
+           h1Array[1].style.backgroundColor = colorName;
+           h1Array[1].style.color = "white";
+        }
+    </script>
+</head>
+<body>
+    <h1>Change Colors</h1>
+    <h1>Change background</h1>
+    <hr>
+    <button type="button" onclick="colorChange('red')">red</button>
+    <button type="button" onclick="colorChange('blue')">blue</button>
+    <button type="button" onclick="colorChange('yellow')">yellow</button>
+    <button type="button" onclick="colorChange('green')">green</button>
+</body>
+</html>

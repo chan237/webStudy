@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        messagePrint();
+        //messagePrint3(); //아래에 써야 작동됨
+        //messagePrint2(); //아래에 써야 작동됨
+
+        function messagePrint(){    //함수선언, 실행하려면 콜을 해야한다.
+            console.log("message1");
+        }
+
+        let messagePrint2 = function(){    
+            console.log("message2");
+        }
+        
+        let messagePrint3 = ()=>console.log("message3");    //화살표함수(자바 람다식)
+
+        messagePrint2(); 
+        messagePrint3();
+    </script>
+</head>
+<body>
+    <h1>function hoisting test</h1>
+</body>
+</html>
