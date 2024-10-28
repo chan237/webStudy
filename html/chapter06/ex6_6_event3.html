@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function randomFood(){
+            //금액 입력 객체를 가져와야함
+            let priceObj = window.document.getElementById("price");
+            //금액 입력이 1200원 미만이면 경고창 및 리턴
+            let price = parseInt(priceObj.value); 
+            //금액 입력 1200원 이상이면 1200원 음식을 몇개 줄 수 있는지 파악한다. 갯수=금액/1200
+            let count = Math.floor(price/1200);
+            let total = count*1200;
+            let change = price-total;
+            window.console.log("price",price); //변수 뭐찍히는지 궁금할 때
+            
+            if(price < 1200){
+                window.alert(`${price}원 으로는 주문불가입니다.`); //템플릿 리터럴 방식
+                return;
+            }
+
+            for(let i=0;i<count;i++){
+                //랜덤수
+                let no = math.floor(Math.random()*(3-1+1)+1);
+                document.write(`${i+1}번 음식: <img src="./ch06_media/food${no}.png" width="200px">`)
+            }
+                document.write("<hr>")
+                document.write(`<p>총액: ${total} 잔액: ${change}</p>`)
+            
+            
+            //갯수만큼 이미지를 보여준다.
+            //총액과 잔액 계산해서 보여준다.
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="get">
+        <p>음식 한개당 1200원 입니다. 얼마치 내실래요?</p>
+        <label for="food">금액입력</label>
+        <input type="number" name="price" id="price" min="1000">
+        <button type="button" onclick="randomFood();">order</button>
+    </form>
+
+</body>
+</html>
