@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            position: absolute;
+        }
+        button.ic{
+            position: relative;
+            bottom: -230px;
+        }
+        button{  
+            background-color: rgba(250, 250, 250, 0.7);
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+        }
+        .sub{
+            display: none;
+        }
+    </style>
+    <script>
+        function show(){
+            document.querySelector("#info").style.display="block";
+            document.querySelector("#icon").style.display="none";
+        }
+        function close(){
+            document.querySelector("#info").style.display="none";
+            document.querySelector("#icon").style.display="block";
+        }
+    </script>
+</head>
+<body>
+    <img src="./조던.png">
+    <button class="ic" id="icon" onclick="show()"><p>상세 설명 보기</p></button>
+    <div class="sub" id="info">
+        <h1>에어 조던1 시카고</h1>
+        <p>1985년 농구선수 마이클 조던이 직접 사인을 남긴 ‘에어 조던1 시카고’마이클 조던의 친필 사인이 적힌 붉은색 신발은 1985년 발매 당시 조던이 직접 사인했다. 한 쪽 신발에 조던 사인이 적힌 건 세계에 몇 족 있지만, 양쪽에 모두 사인이 적힌 신발은 유일하다.무엇보다 조던이 워낙 사인을 자주 하지 않고, 사인의 모습도 항상 다르기 때문에, 그 가치가 더 높다.</p>
+        <button id="icon2" onclick="close()"><p>상세 설명 닫기</p></button>
+    </div>
+            
+        
+    
+</body>
+</html>
