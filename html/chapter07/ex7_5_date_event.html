@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <form action="#" method="get">
+        <h2>궁금한 날짜를 입력하세요</h2>
+        <input type="number" name="year" id="year" ize="4"> <br>
+        <input type="number" name="month" id="month" size="4"> <br>
+        <input type="number" name="day" id="day" size="4">
+        <button type="button" onclick="calculateDate();">계산</button>
+    </form>
+    <p id="today"></p>
+    <p id="result"></p>
+    <div id="result2">
+
+    </div>
+    <script>
+        function calculateDate(){
+            const year = document.querySelector('#year').value;
+            const month = document.querySelector('#month').value;
+            const day = document.querySelector('#day').value;
+            const today = document.querySelector('#today');
+            const result = document.querySelector('#result');
+
+            //현재 날짜
+            const currentDay = new Date();
+            //사용자가 입력한 날짜
+            const userDay = new Date(year,month-1,day);
+            //현재 날짜 출력하기
+            today.textContent = `${currentDay.toLocaleString()}`;
+            //날짜 계산하기 사용자가 입력한 날짜-현재날짜
+            const timeDifference = (userDay-currentDay)/(1000*60*60*24);
+            result.textContent = `${Math.floor(timeDifference)}`;
+
+            let strDat1 =`${currentDay.toLocaleString()}<br>`;
+            let strDat2 =`${Math.floor(timeDifference)} 일 남았음`;
+            let strDat3 = strDat1.concat(strDat2);
+            document.querySelector('#result2').innerHTML = strDat3
+        }
+    </script>
+</body>
+</html>
