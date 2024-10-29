@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //let:일반변수, const:객체,제일 많이 쓰임, 한번 값 주면 변경불가
+        const s1 = new String("web");
+        const s2 = "Programming";
+        document.write(`s1 = ${s1}<br>`)
+        document.write(`s2 = ${s2}<br><hr>`)
+        document.write(`s1.charAt(1) = ${s1.charAt(1)}<br>`)                //s1의 1번 글자(0부터 시작함)
+        document.write(`s1.concat(s2) = ${s1.concat(s2)}<br>`)              //콘켓, 두 문자열 합침
+        document.write(`s2.indexOf('i') = ${s2.indexOf('i')}<br>`)          //()안의 글자가 몇번째인지 찾아줌
+        document.write(`s2.replace('P','g') = ${s2.replace('P','g')}<br>`)  //(앞,뒤)앞의 글자를 뒤에 글자로 바꿔줌
+        document.write(`s2.search('m') = ${s2.search('m')}<br>`)            //()안의 글자가 몇번째인지 찾아줌
+        document.write(`s2.split('a') = ${s2.split('a')}<br>`)              //()를 기준으로 문자열 분리, ()는 사라짐
+        document.write(`s2.substr(3,7) = ${s2.substr(3,7)}<br>`)            //(앞,뒤)앞 부터 뒤글자길이까지 분리해줌
+        document.write(`s2.substring(3,7) = ${s2.substring(3,7)}<br>`)      //(앞,뒤)앞 부터 뒤글자 순서까지 분리해줌
+        document.write(`s2.slice(3,7) = ${s2.slice(3,7)}<br>`)              //같음
+        document.write(`s2.trim() = ${s2.trim()}<br>`)                      //공백제거
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
