@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        b{
+            font-size: small;
+            color: red;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 서버에선 문자로 받는다. 싫으면 post를 써야한다. -->
+    <form action="login.jsp" method="post" name="login">
+        <label for="userID">사용자ID</label><br>
+        <input type="text" name="userID" id="userID"><span></span><br>
+        <label for="pwd">패스워드</label><br>
+        <input type="password" name="pwd" id="pwd"><br>
+        <button type="button">log in</button>
+    </form>
+    <script>
+        //이벤트를 걸 객체를 찾는다.
+        const btnObj = document.querySelector('[type="button"]');
+
+        
+        let check = ()=>{btnObj.addEventListener("click",()=>{
+            const userID = document.login.userID;
+            const pwd = document.querySelector("#pwd");
+            if(userID.value.length<8 || userID.value.length>14){
+                userID.nextSibling.innerHTML = `<b>8글자 미만이나 14글자 초과는 안됩니다.</b>`;
+                userID.value = "";
+                userID.focus();
+                return;
+            }else{
+                userID.nextSibling.innerHTML = `<b>성공</b>`;
+            }
+            
+            if(pwd.value.length<8 || pwd.value.length>14){
+                pwd.nextSibling.innerHTML = `<b>8글자 미만이나 14글자 초과는 안됩니다.</b>`;
+                pwd.value = "";
+                pwd.focus();
+                return;
+            }else{
+                pwd.nextSibling.innerHTML = `<b>t성공</b>`;
+            }
+        });}
+        //이벤트를 설정한다. onclick
+        btnObj.addEventListener("click",check);
+
+    </script>
+</body>
+</html>
