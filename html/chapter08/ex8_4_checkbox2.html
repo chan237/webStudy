@@ -13,7 +13,7 @@
         <label for="checkbox">추가음료 1000원</label><br>
         <input type="checkbox" name="food" id="food" value="500">
         <label for="checkbox">추가피클 500원</label><br>
-        <button type="button">add</button>
+        <button type="submit">add</button>
     </form>
     <hr>
     <p id="result">추가금액: 0원</p>
@@ -22,19 +22,19 @@
         const btn = document.querySelector('[type="button"]');
         const foodArray = document.myform.food;
         const pobj = document.querySelector("p#result");
-        let sum = 0;
 
         foodArray.forEach(obj=>obj.addEventListener("click",check));
         btn.addEventListener("click",check);
         
         function check(){
+            let sum = 0;
             foodArray.forEach((obj,index)=>{
                 if(obj.checked===true){
                     sum+=parseInt(obj.value);
                 }
             });
             pobj.textContent = `추가금액: ${sum}원`;
-            if(sum===0){
+            if(sum === 0){
                 alert("한개 이상은 선택해주세요");
                 return;
             }else{
