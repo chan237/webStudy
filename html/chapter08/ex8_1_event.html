@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="elmid">p id = "elmid"</p>
+    <p>p & no class</p>
+    <p class="elm">p class="elm" 1</p>
+    <p class="elm">p class="elm" 2</p>
+    <hr>
+
+    <script>
+        const elmArray = document.querySelectorAll(".elm");
+        elmArray.forEach((elm,index)=>document.write(`querySelectorAll: elm[${index}] = ${elm.textContent}<br>`));
+
+        const pArray = document.querySelectorAll("p");
+        pArray.forEach((pobj,i)=>document.write(`querySelectorAll: TagName p[${i}] = ${pobj.textContent}<br>`));
+
+        const elmid = document.querySelector("#elmid");
+        document.write(`querySelector: id p= ${elmid.textContent}`)
+    </script>
+</body>
+</html>
