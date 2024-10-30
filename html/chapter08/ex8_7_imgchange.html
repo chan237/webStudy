@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        aside{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .banner{
+            height: 150px;
+            width: 150px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 83px 19px rgba(0,0,0,1);
+            -webkit-box-shadow: 0px 0px 83px 19px rgba(0,0,0,1);
+            -moz-box-shadow: 0px 0px 83px 19px rgba(0,0,0,1);
+        }
+    </style>
+        
+    <script>
+        function load(){
+            const img = document.querySelector("img");
+            const btn = document.querySelector("button");
+
+            btn.addEventListener("click",()=>{
+               let num = Math.floor(Math.random()*(3-1+1)+1);
+               let srcData = `./ch06_media/food${num}.png`;
+               img.src = srcData;
+            });
+            function imgchange(){
+                let num = Math.floor(Math.random()*(3-1+1)+1);
+                let srcData = `./ch06_media/food${num}.png`;
+                img.src = srcData;
+            };
+                
+            
+            setInterval(imgchange,2000)
+        }
+    </script>
+</head>
+<body onload="load();">
+    <aside>
+        <div class="banner">
+            <img src="./ch06_media/food1.png" alt=""><br>
+            <button type="button">change</button>
+        </div>
+    </aside>
+</body>
+</html>
