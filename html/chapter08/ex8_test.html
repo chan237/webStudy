@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form만 name으로 관리한다. -->
+    <form name="myform" method="get">
+        <input type="text" name="userID">
+        <button type="submit">제출</button>
+        <button type="reset">취소</button>
+    </form>
+    <script>
+        const id1 = document.myform.userID;
+        alert(`${id1.value}님 환영합니다`)
+    </script>
+</body>
+</html>

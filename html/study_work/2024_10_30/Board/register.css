@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* header */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    background-color: bisque;
+    height: 150px;
+    margin: 10px auto;
+    text-align: center;
+}
+ul a{
+    color: black;
+    text-decoration: none;
+}
+ul a:hover{
+    color: white;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+}
+li{
+    margin-right: 50px;
+}
+
+/* carousel */
+nav{
+    height: 500px;
+    min-width: 1200px;
+    position: relative;
+}
+.slideshow_slides{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.slideshow_slides img{
+    border-radius: 3cm;
+    width: 1200px;
+    height: 500px;
+}
+.slideshow_slides a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    z-index: 0.5;
+}
+.slideshow_nav a{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+    font-size: 62px;
+    transform: translateY(-50%);
+}
+.slideshow_nav a:hover{
+    color: rgb(93, 93, 93);
+}
+.slideshow_nav a.prev{
+    margin-left: -462px;
+}
+.slideshow_nav a.next{
+    margin-left: 400px;
+}
+.slideshow_indicator{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.slideshow_indicator a{
+    color: rgba(255, 255, 255, 0.5);
+    padding: 7px;
+    font-size: 24px;
+    display: inline-block;
+
+}
+.slideshow_indicator a.active{
+    color: rgb(93, 93, 93);
+}
+
+/* main */
+main{
+    display: flex;
+    width: 1200px;
+    justify-content: space-around;
+    margin: 10px auto;
+}
+.main1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    background-color: rgb(142, 250, 103);
+    text-align: center;
+    
+}
+.main2{
+    background-color: rgb(142, 250, 103);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.main2 h2{
+    text-align: center;
+    margin: 20px;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid white;
+    margin: 10px;
+}
+th, td{
+    text-align: left;
+    width: 200px;
+    padding: 5px;
+   
+}
+th{
+    font-size: small;
+    border: 1px solid rgb(209, 209, 209);
+    background-color: rgb(209, 209, 209);
+}
+td{
+    height: 50px;
+    border: 1px solid white;
+    background-color: white;
+}
+table input{
+    border: 0px;
+    font-size: large;
+}
+.green{
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: green;
+}
+.main3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    background-color: rgb(142, 250, 103);
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 200px;
+    background-color: rgb(142, 250, 103);
+    text-align: center;
+    margin: 10px auto;
+}
