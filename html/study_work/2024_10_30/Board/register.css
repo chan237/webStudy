@@ -21,6 +21,12 @@ ul a{
 ul a:hover{
     color: white;
 }
+ul a.head_a1:hover .head_menu{
+    display: block;
+}
+div.head_menu{
+    display: none;
+}
 
 ul{
     display: flex;
