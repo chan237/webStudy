@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onLoad(){
+            const img = document.querySelector("img");
+            let wb = 0;
+            let hi = 0;
+            
+            document.addEventListener("keydown",(e)=>{
+                if(e.key === 'ArrowLeft'){
+                    wb -= 10;
+                    if(wb<0){wb=0;}
+                }
+                if(e.key === 'ArrowRight'){
+                    wb += 10;
+                    if(wb>300){wb=300;}
+                }
+                if(e.key === 'ArrowUp'){
+                    hi += 10;
+                    if(hi<10){hi=10;}
+                }
+                if(e.key === 'ArrowDown'){
+                    hi -= 10;
+                    if(hi>-300){hi=-300;}
+                }
+                img.style.transform = `translateX(${wb}px)`
+                img.style.transform = `translateY(${hi}px)`
+
+            });
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <h3>키보드로 이미지 좌우이동</h3>
+    <img src="./ch09_media/photo1.jpg" alt="">
+</body>
+</html>
