@@ -3,13 +3,16 @@
     margin: 0px;
     padding: 0px;
 }
+
 body{
     /* 폰트사이즈, 구글폰트, 글자간격, 배경색 */
 }
+
 a{
     text-decoration: none;
     color: white;
 }
+
 /* 메뉴css */
 ul {
     border: 1px dotted black;

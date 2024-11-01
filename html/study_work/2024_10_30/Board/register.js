@@ -120,7 +120,6 @@ function onLoad(){
             inputPW2.nextSibling.style.color ="red";
             inputPW1.value="";
             inputPW2.value="";
-            inputPW1.focus(); 
             return; 
         }
     });
@@ -131,14 +130,14 @@ function onLoad(){
      //폼 이벤트등록및 핸들러처리
      myform.addEventListener("submit",(e)=>{
         e.preventDefault();
-        validate(inputID, idPattern, "영문자, 숫자, _만 입력 가능" );
-        validate(inputPW1,pwdPattern, "영문자와 숫자, _ 6~10" );
-        validate(inputPW2,pwdPattern, "영문자와 숫자, _ 6~10" );
-        validate(inputName,namePattern, "한글 2~4글자,영문자 2-10 첫글자는대문자 공백가능" );
+        validate(inputID, idPattern, "영문자, 숫자, _" );
+        validate(inputPW1,pwdPattern, "영문자, 숫자, _ 6~10" );
+        validate(inputPW2,pwdPattern, "영문자, 숫자, _ 6~10");
+        validate(inputName,namePattern, "한글 2~4글자,영문자(첫자 대문자) 2-10" );
         validate(inputEmail,emailPattern, "이메일형식 안맞음" );
-        validate(inputMobile,mobilePattern, "모바일전화번호형식이 안맞음" );
+        validate(inputMobile,mobilePattern, "모바일번호형식이아님" );
         alert("서버로 전송하겠습니다.");
-        myform.submit();  
+        myform.submit(); 
     });
 
     //핸들러처리기능    
