@@ -14,14 +14,6 @@ header{
     margin: 10px auto;
     text-align: center;
 }
-ul a{
-    color: black;
-    text-decoration: none;
-}
-ul a:hover{
-    color: white;
-}
-
 ul{
     display: flex;
     list-style-type: none;
@@ -29,6 +21,31 @@ ul{
 li{
     margin-right: 50px;
 }
+ul a{
+    color: black;
+    text-decoration: none;
+}
+ul a:hover{
+    color: white;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown_contant{
+    display: none;
+    position: absolute;
+    background-color: bisque;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown_contant a{
+    display: block;
+    padding: 16px;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
 
 /* carousel */
 nav{

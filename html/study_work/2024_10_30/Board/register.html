@@ -8,14 +8,42 @@
     <link rel="stylesheet" href="./register.css">
     <script src="./register.js"></script>
 </head>
-<body onload="carousel();">
+<body onload="onLoad();">
     <header>
         <h1><i class="fa-solid fa-camera-retro"></i>MIRE PHOTO</h1>
         <ul>
-            <li><a href="#"><h1>menu</h1></a></li>
-            <li><a href="#"><h1>menu</h1></a></li>
-            <li><a href="#"><h1>menu</h1></a></li>
-            <li><a href="#"><h1>menu</h1></a></li>
+            <li class="dropdown">
+                <a href="#" class="dropptn"><h2>menu</h2></a>
+                <div class="dropdown_contant">
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropptn"><h2>menu</h2></a>
+                <div class="dropdown_contant">
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropptn"><h2>menu</h2></a>
+                <div class="dropdown_contant">
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropptn"><h2>menu</h2></a>
+                <div class="dropdown_contant">
+                    <a href="#">home1</a>
+                    <a href="#">home2</a>
+                    <a href="#">home3</a>
+                </div>
+            </li>
         </ul>
         <h1><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-twitter"></i></h1>
     </header>
@@ -39,137 +67,139 @@
     </nav>
     <main>
         <div class="main1"><h2>NAV</h2></div>
-        <div class="main2">
-            <h2>MIRE PRCTURE</h2>
-            <table>
-                <tr>
-                    <th colspan="3">아이디</th>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <label for="userid"></label>
-                        <input type="text" name="userid" id="userid">
-                    </td>
-                    <td><p>@naver.com</p></td>
-                </tr>
-                <tr>
-                    <th colspan="3">비밀번호</th>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <label for="pwd"></label>
-                        <input type="password" name="pwd" id="pwd">
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="3">비밀번호 재확인</th>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <label for="pwd"></label>
-                        <input type="password" name="pwd" id="pwd">
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="3">이름</th>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <label for="name"></label>
-                        <input type="text" name="name" id="name">
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="3">생년월일</th>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="year"></label>
-                        <input type="text" name="year" id="year" value="년(자)">
-                    </td>
-                    <td>
-                        <label for="month"></label>
-                        <select name="month" id="month">
-                            <option value="0">월</option>
-                            <option value="1">1월</option>
-                            <option value="2">2월</option>
-                            <option value="3">3월</option>
-                            <option value="4">4월</option>
-                            <option value="5">5월</option>
-                            <option value="6">6월</option>
-                            <option value="7">7월</option>
-                            <option value="8">8월</option>
-                            <option value="9">9월</option>
-                            <option value="10">10월</option>
-                            <option value="11">11월</option>
-                            <option value="12">12월</option>
-                        </select>
-                    </td>
-                    <td>
-                        <label for="day"></label>
-                        <input type="text" name="day" id="day" value="일">
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="3">성별</th>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <label for="sex"></label>
-                        <select name="sex" id="sex">
-                            <option value="0">성별</option>
-                            <option value="1">남자</option>
-                            <option value="2">여자</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="3">본인 확인 이메일<span>(선택)</span></th>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <label for="useremail"></label>
-                        <input type="email" name="useremail" id="useremail">
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="3">휴대전화</th>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <label for="phone"></label>
-                        <select name="phone" id="phone">
-                            <option value="0">대한민국 +82</option>
-                            <option value="1">우리집 +11</option>
-                            <option value="2">너희집 +22</option>
-                            <option value="3">지하철 +33</option>
-                            <option value="4">아는집 +44</option>
-                            <option value="5">몰루겠음 +55</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <label for="pho"></label>
-                        <input type="tel" name="pho" id="pho">
-                    </td>
-                    <td>
-                        <button class="green" type="button">인증번호 받기</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <label for="per_no"></label>
-                        <input type="number" name="per_no" id="per_no">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <button class="green" type="button">가입하기</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <form action="#" class="myform">
+            <div class="main2">
+                <h2>MIRE PRCTURE</h2>
+                <table>
+                    <tr>
+                        <th colspan="3">아이디</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="userid"></label>
+                            <input type="text" name="userid" id="userid"><span></span>
+                        </td>
+                        <td><p>@naver.com</p></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">비밀번호</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="pwd1"></label>
+                            <input type="password" name="pwd1" id="pwd1"><span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">비밀번호 재확인</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="pwd2"></label>
+                            <input type="password" name="pwd2" id="pwd2"><span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">이름</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="name"></label>
+                            <input type="text" name="name" id="name"><span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">생년월일</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="year"></label>
+                            <input type="text" name="year" id="year" value="년(자)">
+                        </td>
+                        <td>
+                            <label for="month"></label>
+                            <select name="month" id="month">
+                                <option value="0">월</option>
+                                <option value="1">1월</option>
+                                <option value="2">2월</option>
+                                <option value="3">3월</option>
+                                <option value="4">4월</option>
+                                <option value="5">5월</option>
+                                <option value="6">6월</option>
+                                <option value="7">7월</option>
+                                <option value="8">8월</option>
+                                <option value="9">9월</option>
+                                <option value="10">10월</option>
+                                <option value="11">11월</option>
+                                <option value="12">12월</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="day"></label>
+                            <input type="text" name="day" id="day" value="일">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">성별</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="sex"></label>
+                            <select name="sex" id="sex">
+                                <option value="0">성별</option>
+                                <option value="1">남자</option>
+                                <option value="2">여자</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">본인 확인 이메일<span>(선택)</span></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="useremail"></label>
+                            <input type="email" name="useremail" id="useremail">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">휴대전화</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="phone"></label>
+                            <select name="phone" id="phone">
+                                <option value="0">대한민국 +82</option>
+                                <option value="1">우리집 +11</option>
+                                <option value="2">너희집 +22</option>
+                                <option value="3">지하철 +33</option>
+                                <option value="4">아는집 +44</option>
+                                <option value="5">몰루겠음 +55</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="pho"></label>
+                            <input type="tel" name="pho" id="pho"><span></span>
+                        </td>
+                        <td>
+                            <button class="green" type="button">인증번호 받기</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="per_no"></label>
+                            <input type="number" name="per_no" id="per_no">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button class="green" type="submit">가입하기</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
         <div class="main3"><h2>ASIDE</h2></div>
     </main>
     <footer>
